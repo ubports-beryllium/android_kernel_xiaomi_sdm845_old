@@ -39,23 +39,17 @@
 			__func__, __LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
 			ODU_BRIDGE_DRV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			ODU_BRIDGE_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 #define ODU_BRIDGE_DBG_LOW(fmt, args...) \
 	do { \
 		pr_debug(ODU_BRIDGE_DRV_NAME " %s:%d " fmt, \
 			__func__, __LINE__, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			ODU_BRIDGE_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 #define ODU_BRIDGE_ERR(fmt, args...) \
 	do { \
 		pr_err(ODU_BRIDGE_DRV_NAME " %s:%d " fmt, \
 			__func__, __LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
-			ODU_BRIDGE_DRV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
 			ODU_BRIDGE_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 

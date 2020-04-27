@@ -35,23 +35,17 @@
 		pr_debug(DEV_NAME " %s:%d " fmt, __func__, __LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
 			DEV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			DEV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPAWANDBG_LOW(fmt, args...) \
 	do { \
 		pr_debug(DEV_NAME " %s:%d " fmt, __func__, __LINE__, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			DEV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPAWANERR(fmt, args...) \
 	do { \
 		pr_err(DEV_NAME " %s:%d " fmt, __func__, __LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
-			DEV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
 			DEV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
@@ -61,16 +55,12 @@
 			__LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
 			DEV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			DEV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPAWANINFO(fmt, args...) \
 	do { \
 		pr_info(DEV_NAME " %s:%d " fmt, __func__, __LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
-			DEV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
 			DEV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 

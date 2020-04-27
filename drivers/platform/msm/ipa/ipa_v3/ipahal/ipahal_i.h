@@ -24,16 +24,12 @@
 			## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
 			IPAHAL_DRV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			IPAHAL_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPAHAL_DBG_LOW(fmt, args...) \
 	do { \
 		pr_debug(IPAHAL_DRV_NAME " %s:%d " fmt, __func__, __LINE__, \
 			## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			IPAHAL_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPAHAL_ERR(fmt, args...) \
@@ -42,8 +38,6 @@
 			## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
 			IPAHAL_DRV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			IPAHAL_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPAHAL_ERR_RL(fmt, args...) \
@@ -51,8 +45,6 @@
 			pr_err_ratelimited_ipa(IPAHAL_DRV_NAME " %s:%d " fmt, \
 			__func__, __LINE__, ## args); \
 			IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
-				IPAHAL_DRV_NAME " %s:%d " fmt, ## args); \
-			IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
 				IPAHAL_DRV_NAME " %s:%d " fmt, ## args); \
 		} while (0)
 

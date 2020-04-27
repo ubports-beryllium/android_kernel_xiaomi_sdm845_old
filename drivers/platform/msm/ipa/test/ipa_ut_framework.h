@@ -25,16 +25,12 @@
 			__func__, __LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
 			IPA_UT_DRV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			IPA_UT_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPA_UT_DBG_LOW(fmt, args...) \
 	do { \
 		pr_debug(IPA_UT_DRV_NAME " %s:%d " fmt, \
 			__func__, __LINE__, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			IPA_UT_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPA_UT_ERR(fmt, args...) \
@@ -43,8 +39,6 @@
 			__func__, __LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
 			IPA_UT_DRV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
-			IPA_UT_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
 #define IPA_UT_INFO(fmt, args...) \
@@ -52,8 +46,6 @@
 		pr_info(IPA_UT_DRV_NAME " %s:%d " fmt, \
 			__func__, __LINE__, ## args); \
 		IPA_IPC_LOGGING(ipa_get_ipc_logbuf(), \
-			IPA_UT_DRV_NAME " %s:%d " fmt, ## args); \
-		IPA_IPC_LOGGING(ipa_get_ipc_logbuf_low(), \
 			IPA_UT_DRV_NAME " %s:%d " fmt, ## args); \
 	} while (0)
 
